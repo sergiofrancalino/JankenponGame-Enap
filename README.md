@@ -23,7 +23,7 @@ Surgiu na China, mas ficou muito popular no Japão (San sukumi ken). É (teorica
 5. a relação de preferências de cada um diante dos resultados.
 Jogos com apenas uma pessoa são considerados jogos contra a natureza (ou jogos de Sorte). Jogos como dados ou jogar a moeda para cima são assim. Um outro tipo são jogos não-cooperativos, que são basicamente um confronto de interesses. Neste caso, há três opções: vitória, derrota ou empate. Estes jogos são chamados de jogos de soma zero, onde não há possibilidade de cooperação entre os competidores, já que seus interesses são totalmente opostos.
 
-Pedra Papel e Tesoura é um jogo de soma zero.
+Pedra Papel e Tesoura ** é um jogo de soma zero **.
 
 O jogo funciona assim:
 
