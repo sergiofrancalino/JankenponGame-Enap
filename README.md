@@ -38,7 +38,8 @@ Os jogadores devem simultaneamente esticar a mão, na qual cada um formou um sí
 Um bom exemplo é uma cena do filme “3 homens em conflito” (The good the bad and the ugly), onde 3 caras armados estão se encarando, com o mapa do tesouro no centro. Cada um deles tem que atirar no outro. O resultado final não depende apenas da minha escolha. Depende da escolha dos outros.
 
 
-**E aí, o que você faria?**![image](https://user-images.githubusercontent.com/115905420/198918320-bd888909-62f6-497f-a301-f3abde399dc2.png)
+![image](https://user-images.githubusercontent.com/115905420/198918320-bd888909-62f6-497f-a301-f3abde399dc2.png)
+**E aí, o que você faria?**
 
 Qualquer estratégia que venha a ser adotada pode ser vencida por uma outra adequada do adversário. Não há uma estratégia dominante.
 
