@@ -14,7 +14,7 @@ Curiosidades
 Surgiu na China, mas ficou muito popular no Japão (San sukumi ken). É (teoricamente) um jogo infantil, mas é muito jogado por adultos em tomada de decisão. Existe inclusive um campeonato mundial, organizado pela “World Rock Paper Scissors Society” (WRPS).
 
 
-Para a ciência um jogo é definido por um conjunto de regras com cinco elementos:
+**Para a ciência um jogo é definido por um conjunto de regras com cinco elementos:**
 
 1. O número de participantes;
 2. as ações ou estratégias possíveis;
