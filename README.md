@@ -37,7 +37,7 @@ Papel ganha da pedra (embrulhando-a).
 Um bom exemplo é uma cena do filme “3 homens em conflito” (The good the bad and the ugly), onde 3 caras armados estão se encarando, com o mapa do tesouro no centro. Cada um deles tem que atirar no outro. O resultado final não depende apenas da minha escolha. Depende da escolha dos outros.
 
 
-&E aí, o que você faria?&
+**E aí, o que você faria?**
 Qualquer estratégia que venha a ser adotada pode ser vencida por uma outra adequada do adversário. Não há uma estratégia dominante.
 
 A soma dos resultados de todos os jogadores envolvidos nessa interação é sempre igual a zero. Veja abaixo a matriz de um jogo soma zero entre você e eu, onde 0 mostra o empate, 1 vitória e -1 derrota:
