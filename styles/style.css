@@ -1,16 +1,17 @@
 /* style.css */
 
-/* Start Screen -> Id title-container*/
+/* Article tag -> Start Screen -> Id "|title-container"*/
 #title-container {
   background-color: rgb(129, 124, 124);
 }
 
+/* In article tag title */ 
 h1 {
   text-align: center;
   color: white;
 }
 
-/* StartScreen -> Class container */
+/* Article tag -> Start Screen -> Class "container" */
 .container {
   width: 400px;
   margin: 50px auto;

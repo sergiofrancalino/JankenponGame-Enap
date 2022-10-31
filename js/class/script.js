@@ -2,7 +2,7 @@
 // script.js
 $(document).ready(function() {
     $('#button').click(function() {
-      alert('This app is awesome!');
+      alert('Hello World!!!    This app is awesome!');
     });
   });
   
