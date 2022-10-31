@@ -1,4 +1,4 @@
-﻿# JankenponGame-Enap
+﻿# JankenponGame-Enap : heart
 
 Game Rock Paper Scissors - Jankenpon ou Jokempô (China) ou San sukumi ken (Japão)
 
