@@ -1,3 +1,4 @@
+// CLASS
 // script.js
 $(document).ready(function() {
     $('#button').click(function() {
