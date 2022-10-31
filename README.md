@@ -29,9 +29,10 @@ Pedra Papel e Tesoura **é um jogo de soma zero**.
 
 Os jogadores devem simultaneamente esticar a mão, na qual cada um formou um símbolo. Então, os jogadores comparam os símbolos para decidir quem ganhou, da seguinte forma:
 
-Pedra ganha da tesoura (amassando-a ou quebrando a).
-Tesoura ganha do papel (cortando-o).
-Papel ganha da pedra (embrulhando-a).
+**Pedra** ganha da **tesoura** (amassando-a ou quebrando a);
+**Tesoura** ganha do **papel** (cortando-o);
+**Papel** ganha da **pedra** (embrulhando-a);
+
 É um par ou impar mais complicado. Algumas pessoas acham que vale a pena ter estratégia, mas é diferente do poker, ou outros jogos com cartas.
 
 Um bom exemplo é uma cena do filme “3 homens em conflito” (The good the bad and the ugly), onde 3 caras armados estão se encarando, com o mapa do tesouro no centro. Cada um deles tem que atirar no outro. O resultado final não depende apenas da minha escolha. Depende da escolha dos outros.
