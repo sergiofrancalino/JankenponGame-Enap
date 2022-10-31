@@ -7,6 +7,8 @@ Esse pode ser mais complexo de criar, porém bem legal, com ele é possível tra
 Curiosidades
 
 Pedra, papel e tesoura: muito mais que um jogo, uma estratégia de sobrevivência.
+![image](https://user-images.githubusercontent.com/115905420/198917359-91d89076-d3a8-45c4-82b0-54b75e14668c.png)
+
 
 Surgiu na China, mas ficou muito popular no Japão (San sukumi ken). É (teoricamente) um jogo infantil, mas é muito jogado por adultos em tomada de decisão. Existe inclusive um campeonato mundial, organizado pela “World Rock Paper Scissors Society” (WRPS).
 
