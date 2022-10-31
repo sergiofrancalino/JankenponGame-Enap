@@ -1,6 +1,6 @@
 ﻿# JankenponGame-Enap 
 
-Game Rock Paper Scissors - Jankenpon ou Jokempô (China) ou San sukumi ken (Japão):heart:
+Game Rock Paper Scissors - Jankenpon ou Jokempô (China) ou San sukumi ken (Japão:heart:)
 
 Esse pode ser mais complexo de criar, porém bem legal, com ele é possível trabalhar o lado de lógica de programação e interação com elementos!
 
