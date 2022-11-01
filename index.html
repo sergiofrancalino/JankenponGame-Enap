@@ -43,12 +43,24 @@
    <!-- Game Screen -->
    <article id="GameScreen">
     <section id="gameScore" class="hide">
-      <p>Hey, <span id="playerName"></span></p>
-      <p>You have <span id="points"></span> rounds!</p>   
-      <button id="btnChooseRock">Choose Rock!</button>
-      <button id="btnChoosePaper">Choose Paper</button>
-      <button id="btnChooseScissors">Choose Scissors</button>
+      <p>Hi, <span id="playerName"></span></p>
+      <p>You have <span id="points"></span> points!</p>  
+      <p>Status <span id ="resultado"></span></p> 
+
+      <div class="choices">
+        <div class="choice">
+          <img id="rock" name="./assets/rock.ico" src="assets/rock.ico" />
+        </div>
+  
+        <div class="choice">
+          <img id="paper" name="./assets/paper.ico" src="assets/paper.ico" />
+        </div>
+  
+        <div class="choice" id="scissors">
+          <img src="assets/scissors.ico" />
+        </div>
     </section>
+
     <div id="board" class="board"></div>
   </article>
 
