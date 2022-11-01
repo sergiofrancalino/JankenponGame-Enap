@@ -2,29 +2,50 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-
     <!-- linking the css style -->
-    <link rel="stylesheet" href="./styles/style.css" />
-
-    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
-    <script src="script.js"></script>
+    <link rel="stylesheet" href="./styles/style.css" />    
+  <!--<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script> -->  
 
     <title>Jankenpon Game || Ironhack(Enap) WDFT92</title>
   </head>
 
   <body>
-
-    <!-- Start Screen (Class and Id) -->
-   <article class="container" id="title-container">
-    <h1>My First Ironhack Project - Jokempô Game</h1>
+    <!-- Start Screen -->
+    <article id ="startScreen" class="titleStartScreen">
+      <h1>My First Ironhack Project - Jokemp&ocirc; Game</h1>
+      <div>
+        <label>What's your name? </label>
+        <input type ="text"
+          placeholder="Enter your name here, pls!"
+          id="inputName"
+        />
+        <button id="btnStart">Jogar!!</button>
+      </div>
    </article> 
 
-   <div class="container">
-      <button id="button">Click me!</button>
-   </div>
+   <!-- Game Screen -->
+   <article id="GameScreen">
+    <section id="gameScore" class="hide">
+      <p>Hey, <span id="name">nomeDoJogador</span></p>
+      <p>You have <span id="points">xxx</span> rounds!</p>
+    </section>
+    <div id="board" class="board"></div>
+  </article>
+
+  <div class="container">
+    <button id="button">Click me!</button>
+  </div>
+
+ <!--
+ <div class="container">
+    <button id="btnChooseRock"> Choose Rock!</button>
+    <button id="btnChoosePaper"> Choose Paper</button>
+    <button id="btnChooseScissors"> Choose Scissors</button>
+  </div>
+ -->
 
     <!-- linking my scripts -> js -->
     <script src="./js/class/script.js"></script>
