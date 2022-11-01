@@ -3,12 +3,6 @@
 //Instantiate my Jankenpon class
 const game = new Jankenpon();
 
-//$(document).ready(function() {
-//    $('#button').click(function() {
-//      alert('Hello World!!!    This app is awesome!');
-//    });
-//  });
-
 //Capturing all HTML elements
 const startScreen = document.getElementById("startScreen");
 const inputName = document.getElementById("inputName");
@@ -35,4 +29,6 @@ btnStart.addEventListener("click", () => {
     game.renderDeck();
   
     settingUpGame();
-  });
+});
+
+  
