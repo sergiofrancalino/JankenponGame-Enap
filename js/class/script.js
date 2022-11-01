@@ -13,7 +13,8 @@ class Jankenpon {
   }
   
   renderDeck() {
-    //randomizar o deck ->> EMBARALHAR -> shufle
+    
+    //Surfle array deck 
     this.deck.sort(() => {
       return Math.random() - 0.5;
     });

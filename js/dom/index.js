@@ -13,18 +13,18 @@ const points = document.getElementById("points");
 const board = document.getElementById("board");
 const btnStart = document.getElementById("btnStart");
 
-//adicionar o event listener no btnStart
+//Add the event listener to btnStart
 btnStart.addEventListener("click", () => {
 
-    // startScreen desapareça
+    // Hide the startScreen class 
     startScreen.classList.add("hide");
  
-    // mostrar o gameScore
+    //Show the gameScore class
     gameScore.className = "show";
   
-    game.player = inputName.value; //setando o nome do jogador na minha classe
-    points.innerText = game.points; // setando o numero de tentativos no meu html
-    playerName.innerText = game.player; // setando o nome do jogador no meu html
+    game.player = inputName.value; 
+    points.innerText = game.points; 
+    playerName.innerText = game.player; 
   
     game.renderDeck();
   
