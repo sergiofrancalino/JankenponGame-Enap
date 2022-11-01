@@ -1,4 +1,5 @@
 /* style.css */
+/*Cleaning up the CSS, import and choosing the font*/
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
 
 * {
@@ -14,6 +15,14 @@
   gap: 15px;
 }
 
+.titleScreen {
+  display: flex;
+  font-size: 2rem;
+  padding: 30px;
+  border-radius: 15%;
+  background-color: rgb(53, 53, 53);
+  color: white;
+}
 .startScreen {
   display: flex;
   height: 100vh;
@@ -32,11 +41,9 @@
   flex-direction: column;
   align-items: center;
   gap: 15px;
-
   border-radius: 18px;
   background: #e0e0e0;
   box-shadow: 8px 8px 5px #bebebe, -8px -8px 5px #ffffff;
-
   padding: 40px;
 }
 #inputName {

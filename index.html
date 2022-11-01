@@ -6,30 +6,41 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- linking the css style -->
-    <link rel="stylesheet" href="./styles/style.css" />    
-    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
-
+    <link rel="stylesheet" href="./styles/style.css" />   
     <title>Jankenpon Game || Ironhack(Enap) WDFT92</title>
   </head>
 
   <body>
+    <!-- Title Screen -->
+    <article id="titleScreen" class="titleScreen">
+      <h1>First Ironhack/Enap Web Development Project</h1>
+      <h1>Jankenpon Game (Rock/Paper/Scissors)
+        <h1> Bem-vindo ao jogo Pedra-Papel-Tesoura!</h1>   
+      </h1>
+    </h1>
+    </article>
+
     <!-- Start Screen -->
-    <article id ="startScreen" class="titleStartScreen">
-      <h1>My First Ironhack Project - Jokemp&ocirc; Game</h1>
+    <article id ="startScreen" class="startScreen">
+      <h1>Welcome to Jokemp&ocirc; Game!</h1>
       <div>
-        <label>What's your name? </label>
+        <label>What's your first name? </label>
         <input type ="text"
-          placeholder="Enter your name here, pls!"
+          placeholder="Pls, enter your name here!"
           id="inputName"
         />
-        <button id="btnStart">To Play!?</button>
+  //      <input type ="number"
+  //        placeholder="Attempts?choose above 1"
+  //        id="inputRound"
+  //      />
+        <button id="btnStart">Play</button>
       </div>
    </article> 
 
    <!-- Game Screen -->
    <article id="GameScreen">
     <section id="gameScore" class="hide">
-      <p>Hey, <span id="name">nomeDoJogador</span></p>
+      <p>Hey, <span id="playerName"></span></p>
       <p>You have <span id="points"></span> rounds!</p>   
       <button id="btnChooseRock">Choose Rock!</button>
       <button id="btnChoosePaper">Choose Paper</button>
