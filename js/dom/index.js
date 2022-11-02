@@ -23,6 +23,7 @@ btnStart.addEventListener("click", () => {
 
      //Show the gameScore class
     gameScore.className = "show";
+
     game.player = inputName.value; 
     points.innerText = game.points; 
     playerName.innerText = game.player; 
@@ -31,10 +32,13 @@ btnStart.addEventListener("click", () => {
 });
 
 
-//Add the event listener to Rock at Game Screen
-const rock = document.getElementById("rock");
+// Capturando classes e ID do HTML 
 const resultado = document.getElementById("resultado");
+const rock = document.getElementById("rock");
+const paper = document.getElementById("paper");
+const scissors = document.getElementById("scissors");
 
+//Add the event listener to Rock 
 rock.addEventListener("click", (e) => {
  let result = "";   
  let sorteado = game.deck [Math.floor(Math.random() * game.deck.length)];
@@ -42,7 +46,7 @@ rock.addEventListener("click", (e) => {
 
  // game.compareDeck(sorteado,target);
  result = game.compareDeck(sorteado,target);
- if (result === "Você Ganhou") {
+ if (result === "You beat!") {
     game.points++
     points.innerText = game.points; 
  }
@@ -50,46 +54,37 @@ rock.addEventListener("click", (e) => {
  console.log(game.points);
 });
 
-
-    
-
-//Add the event listener to Paper at Game Screen
-btnChoosePaper.addEventListener("click", () => {
-    
-
+//Add the event listener to Paper
+paper.addEventListener("click", (e) => {
+    let result = "";   
+    let sorteado = game.deck [Math.floor(Math.random() * game.deck.length)];
+    let target = e.target.name;
    
- });
-
- //Add the event listener to ChooseScissors at Game Screen
-btnChooseScissors.addEventListener("click", () => {
-    
-
-
+    // game.compareDeck(sorteado,target);
+    result = game.compareDeck(sorteado,target);
+    if (result === "You beat!") {
+       game.points++
+       points.innerText = game.points; 
+    }
+    resultado.innerText = result; 
+    console.log(game.points);
 });
 
-function settingUpGame() {
-    // capturar todas as cardsBack
-    // adicionar a ela um eventlistener
-
-    const allHandGame = document.querySelectorAll(".handGame");
-  
-    allHandGame.forEach((handGame) => {
-      handGame.addEventListener("click", () => {
-        //o que acontece quando a mão é clicada
-  
-        const cardFront = cardBack.previousElementSibling;
-  
-        //mostra a carta da frente
-        cardFront.className = "show cardFront";
-  
-        //esconde a carta de trás (carta verde)
-        cardBack.className = "hide cardBack";
-  
-        game.flipCard(cardFront);
-  
-        points.innerText = game.points
-      });
-    });
-  }
+//Add the event listener to Scissors
+scissors.addEventListener("click", (e) => {
+    let result = "";   
+    let sorteado = game.deck [Math.floor(Math.random() * game.deck.length)];
+    let target = e.target.name;
+   
+    // game.compareDeck(sorteado,target);
+    result = game.compareDeck(sorteado,target);
+    if (result === "You beat!") {
+       game.points++
+       points.innerText = game.points; 
+    }
+    
+    resultado.innerText = result; 
+    console.log(game.points);
+});
 
   

@@ -1,4 +1,4 @@
 {
-    "workbench.colorTheme": "Visual Studio Light",
-    "workbench.activityBar.iconClickBehavior": "focus"
+    "workbench.colorTheme": "Visual Studio Dark",
+    "workbench.activityBar.iconClickBehavior": "toggle"
 }

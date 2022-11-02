@@ -22,7 +22,7 @@
 
     <!-- Start Screen -->
     <article id ="startScreen" class="startScreen">
-      <h1>Welcome to Jokemp&ocirc; Game!</h1>
+      <h1>Welcome to Jokenp&ocirc; Game!</h1>
       <div>
         <label>What's your first name? </label>
         <input type ="text"
@@ -44,8 +44,9 @@
    <article id="GameScreen">
     <section id="gameScore" class="hide">
       <p>Hi, <span id="playerName"></span></p>
-      <p>You have <span id="points"></span> points!</p>  
-      <p>Status <span id ="resultado"></span></p> 
+      <p> Let's play rock-paper-scissors!</p>
+      
+      
 
       <div class="choices">
         <div class="choice">
@@ -56,9 +57,13 @@
           <img id="paper" name="./assets/paper.ico" src="assets/paper.ico" />
         </div>
   
-        <div class="choice" id="scissors">
-          <img src="assets/scissors.ico" />
+        <div class="choice">
+          <img id="scissors" name="./assets/scissors.ico" src="assets/scissors.ico" />
         </div>
+
+        <p>Status of play > <span id ="resultado"></span></p> 
+        <p>Your scored > <span id="points"></span> points!!!</p>  
+
     </section>
 
     <div id="board" class="board"></div>
