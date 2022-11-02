@@ -1,90 +1,93 @@
 // DOM Manipulatation
 
-//Instantiate my Jankenpon class
+//Step 1 - INSTANTIATE my Jankenpon class like game
 const game = new Jankenpon();
 
-//Capturing all HTML elements by ID
+//Step 2 - CAPTURING all HTML elements by ID
+
 const startScreen = document.getElementById("startScreen");
-const inputName = document.getElementById("inputName");
 const titleScreen = document.getElementById("titleScreen");
 const gameScreen = document.getElementById("gameScreen");
 const gameScore = document.getElementById("gameScore");
-const playerName = document.getElementById("playerName");
-const points = document.getElementById("points");
+
+const playerName = document.getElementById("playerName"); 
+const inputName = document.getElementById("inputName");
+
+const points = document.getElementById("points"); // To show player's score on screen
 const board = document.getElementById("board");
 const btnStart = document.getElementById("btnStart");
+const ranking = document.getElementById("ranking"); //To show "status of play" on screen
 
+//Step 3 - THE EVENT LISTNER to "btnStart" to show the start game screen
 
-//Add the event listener to btnStart at StartScreen class
 btnStart.addEventListener("click", () => {
-
-    // Hide the startScreen class 
-    startScreen.classList.add("hide");
-
-     //Show the gameScore class
-    gameScore.className = "show";
-
+    startScreen.classList.add("hide"); // To hide the start screen 
+    gameScore.className = "show"; // To show the start game screen 
     game.player = inputName.value; 
     points.innerText = game.points; 
-    playerName.innerText = game.player; 
+    playerName.innerText = game.player;  
     
-    settingUpGame(); //Function -> Let's configure the game
-});
+ // Step 3.1 - CAPTURING the user's choices by ID from HTML to game screen
+    const rock = document.getElementById("rock"); // To capture ROCK element
+    const paper = document.getElementById("paper"); // To capture paper element
+    const scissors = document.getElementById("scissors");
+    let result = "Game starting! 0 <--> 0"; // Variable to save the play result
+    ranking.innerText = result; // To show the initial result 
 
+ // Step 3.2 - THE EVENT LISTNER to ROCK (clicked)
+    rock.addEventListener("click", (e) => {
+        let sorteado = game.deck [Math.floor(Math.random() * game.deck.length)]; //To save raffle from "game" array.
+        let target = e.target.name; // To save human player choice.
 
-// Capturando classes e ID do HTML 
-const resultado = document.getElementById("resultado");
-const rock = document.getElementById("rock");
-const paper = document.getElementById("paper");
-const scissors = document.getElementById("scissors");
+     // game.compareDeck(sorteado,target);
+        result = game.compareDeck(sorteado,target);
 
-//Add the event listener to Rock 
-rock.addEventListener("click", (e) => {
- let result = "";   
- let sorteado = game.deck [Math.floor(Math.random() * game.deck.length)];
- let target = e.target.name;
+        if (result === "You won! 1 <-> 0") {
+            game.points++;
+            points.innerText = game.points; 
+        }
+        ranking.innerText = result; // Result of this play! 
+        console.log(game.points);
+    });
 
- // game.compareDeck(sorteado,target);
- result = game.compareDeck(sorteado,target);
- if (result === "You beat!") {
-    game.points++
-    points.innerText = game.points; 
- }
- resultado.innerText = result; 
- console.log(game.points);
-});
+ // Step 3.3 - THE EVENT LISTNER to PAPER (clicked)
+    paper.addEventListener("click", (e) => {
+        let sorteado = game.deck [Math.floor(Math.random() * game.deck.length)];
+        let target = e.target.name;
+       
+     // game.compareDeck(sorteado,target);
+        result = game.compareDeck(sorteado,target);
 
-//Add the event listener to Paper
-paper.addEventListener("click", (e) => {
-    let result = "";   
-    let sorteado = game.deck [Math.floor(Math.random() * game.deck.length)];
-    let target = e.target.name;
+        if (result === "You won! 1 <-> 0") {
+        game.points++;
+        points.innerText = game.points; 
+        };
+        ranking.innerText = result; // Result of this play! 
+        console.log(game.points);
+    });
+
+ //Step 3.4 - THE EVENT LISTNER to SCISSORS (clicked)
+    scissors.addEventListener("click", (e) => {
+        let sorteado = game.deck [Math.floor(Math.random() * game.deck.length)];
+        let target = e.target.name;
    
-    // game.compareDeck(sorteado,target);
-    result = game.compareDeck(sorteado,target);
-    if (result === "You beat!") {
-       game.points++
-       points.innerText = game.points; 
-    }
-    resultado.innerText = result; 
-    console.log(game.points);
+     // game.compareDeck(sorteado,target);
+        result = game.compareDeck(sorteado,target);
+
+       if (result === "You won! 1 <-> 0") {
+        game.points++;
+        points.innerText = game.points;
+        }
+        ranking.innerText = result; // Result of this play! 
+        console.log(game.points);
+    });
+
+ // Workspace inside btnStart event listner  
+
 });
 
-//Add the event listener to Scissors
-scissors.addEventListener("click", (e) => {
-    let result = "";   
-    let sorteado = game.deck [Math.floor(Math.random() * game.deck.length)];
-    let target = e.target.name;
-   
-    // game.compareDeck(sorteado,target);
-    result = game.compareDeck(sorteado,target);
-    if (result === "You beat!") {
-       game.points++
-       points.innerText = game.points; 
-    }
-    
-    resultado.innerText = result; 
-    console.log(game.points);
-});
+
+
+
 
   
