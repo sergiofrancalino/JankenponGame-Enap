@@ -45,11 +45,11 @@ btnStart.addEventListener("click", () => {
      // game.compareDeck(sorteado,target);
         result = game.compareDeck(sorteado,target);
 
-        if (result === "You won! 1 <-> 0") {
+        if (result === "You won!") {
             game.points++;
             points.innerText = game.points; 
         }
-        if (result === "Meggy won! 0 <-> 1"){
+        if (result === "Meggy won!"){
             game.points2++;
             points2.innerText = game.points2; 
         }
@@ -65,10 +65,14 @@ btnStart.addEventListener("click", () => {
      // game.compareDeck(sorteado,target);
         result = game.compareDeck(sorteado,target);
 
-        if (result === "You won! 1 <-> 0") {
+        if (result === "You won!") {
         game.points++;
         points.innerText = game.points; 
         };
+        if (result === "Meggy won!"){
+            game.points2++;
+            points2.innerText = game.points2; 
+        }
         ranking.innerText = result; // Result of this play! 
         console.log(game.points);
     });
@@ -81,15 +85,19 @@ btnStart.addEventListener("click", () => {
      // game.compareDeck(sorteado,target);
         result = game.compareDeck(sorteado,target);
 
-       if (result === "You won! 1 <-> 0") {
+       if (result === "You won!") {
         game.points++;
         points.innerText = game.points;
+        }
+        if (result === "Meggy won!"){
+            game.points2++;
+            points2.innerText = game.points2; 
         }
         ranking.innerText = result; // Result of this play! 
         console.log(game.points);
     });
 
- // Workspace inside btnStart event listner  
+ // // All events listners inside the click event of "btnStart" from "play" buttom on start screen.
 
 });
 
