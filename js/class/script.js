@@ -4,6 +4,7 @@ class Jankenpon {
   constructor() {
     this.player = "";
     this.points = 0;
+    this.points2 = 0;
     this.deck = [
       "./assets/rock.ico",
       "./assets/paper.ico",

@@ -13,7 +13,9 @@ const gameScore = document.getElementById("gameScore");
 const playerName = document.getElementById("playerName"); 
 const inputName = document.getElementById("inputName");
 
-const points = document.getElementById("points"); // To show player's score on screen
+const points = document.getElementById("points"); // To show player 1 scores on screen
+const points2 = document.getElementById("points2"); // To show player 2 scores on screen
+
 const board = document.getElementById("board");
 const btnStart = document.getElementById("btnStart");
 const ranking = document.getElementById("ranking"); //To show "status of play" on screen
@@ -24,7 +26,8 @@ btnStart.addEventListener("click", () => {
     startScreen.classList.add("hide"); // To hide the start screen 
     gameScore.className = "show"; // To show the start game screen 
     game.player = inputName.value; 
-    points.innerText = game.points; 
+    points.innerText = game.points; // Player 1 score/points!
+    points2.innerText = game.points2; // Player 2 score/points! 
     playerName.innerText = game.player;  
     
  // Step 3.1 - CAPTURING the user's choices by ID from HTML to game screen
@@ -45,6 +48,10 @@ btnStart.addEventListener("click", () => {
         if (result === "You won! 1 <-> 0") {
             game.points++;
             points.innerText = game.points; 
+        }
+        if (result === "Meggy won! 0 <-> 1"){
+            game.points2++;
+            points2.innerText = game.points2; 
         }
         ranking.innerText = result; // Result of this play! 
         console.log(game.points);
