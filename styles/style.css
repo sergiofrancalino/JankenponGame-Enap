@@ -36,36 +36,42 @@
   border-radius: 13px;
 }
 
-/* 1.1 - Start's login screen style */
+/* Whole class - Start Screen in HTML in second article tag */
 .startScreen {
   display: flex;
-  height: 100vh;
+  /* height: 50vh; */
+  gap: 10%;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
 
-.startScreen > h1 {
-  font-size: 130%;
+/* Class startScreen > tag h1 from HTML "Welcome to Jokenpô Game" */
+.startScreen > h1 { 
+  font-size: 140%;
   padding:5%;
   align-items: center;
   text-align: auto;
  
 }
 
+/* class (Inside tag article/div from HTML where ask player nick name) */
 .startScreen > div {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 15px;
+  gap:10px;
   border-radius: 18px;
   background: #e0e0e0;
   box-shadow: 8px 8px 5px #bebebe, -8px -8px 5px #ffffff;
   padding: 8%;
 }
 
+/* Id (Inside tag article/div from HTML */
 #inputName {
-  width: 30vw;
+  width: 50vw;
+  border-radius: 10%;
+  border-color:whitesmoke;
 }
 
 /* Style button to click to play "btnStart"*/
@@ -89,7 +95,7 @@
 }
 .choice > img {
   background-color:rgb(164, 151, 167); 
-  padding: 2%; 
+  padding: 1%; 
   margin: 10%;
   border-radius:27%;
   box-shadow:0 43px 23px rgba(20, 14, 105, 0.4);
@@ -99,6 +105,12 @@
   cursor: pointer;
 	transform: scale(1.4);
   
+}
+
+/* Classe para o evento do click na img */
+.choice > img:active {
+  cursor: pointer;
+	transform: scale(0.6);
 }
 
 #gameScore > p {

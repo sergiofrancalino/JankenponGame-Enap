@@ -20,15 +20,21 @@ const board = document.getElementById("board");
 const btnStart = document.getElementById("btnStart");
 const ranking = document.getElementById("ranking"); //To show "status of play" on screen
 
+const musica = new Audio ("../../assets/audio/jogo.mp3");
+musica.volume = 0.07;
+
 //Step 3 - THE EVENT LISTNER to "btnStart" to show the start game screen
 
 btnStart.addEventListener("click", () => {
+
     startScreen.classList.add("hide"); // To hide the start screen 
     gameScore.className = "show"; // To show the start game screen 
     game.player = inputName.value; 
     points.innerText = game.points; // Player 1 score/points!
     points2.innerText = game.points2; // Player 2 score/points! 
     playerName.innerText = game.player;  
+    
+    musica.play();
     
  // Step 3.1 - CAPTURING the user's choices by ID from HTML to game screen
     const rock = document.getElementById("rock"); // To capture ROCK element
@@ -39,6 +45,7 @@ btnStart.addEventListener("click", () => {
 
  // Step 3.2 - THE EVENT LISTNER to ROCK (clicked)
     rock.addEventListener("click", (e) => {
+        rock.classList.add("escolha");
         let sorteado = game.deck [Math.floor(Math.random() * game.deck.length)]; //To save raffle from "game" array.
         let target = e.target.name; // To save human player choice.
 
@@ -55,6 +62,7 @@ btnStart.addEventListener("click", () => {
         }
         ranking.innerText = result; // Result of this play! 
         console.log(game.points);
+        rock.classList.remove("escolha");
     });
 
  // Step 3.3 - THE EVENT LISTNER to PAPER (clicked)
@@ -97,7 +105,7 @@ btnStart.addEventListener("click", () => {
         console.log(game.points);
     });
 
- // // All events listners inside the click event of "btnStart" from "play" buttom on start screen.
+ // All events listners inside the click event of "btnStart" from "play" buttom on start screen.
 
 });
   
