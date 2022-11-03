@@ -20,7 +20,7 @@ const board = document.getElementById("board");
 const btnStart = document.getElementById("btnStart");
 const ranking = document.getElementById("ranking"); //To show "status of play" on screen
 
-const musica = new Audio ("../blob/main/assets/audio/jogo.mp3");
+const musica = new Audio ("../assets/audio/jogo.mp3");
 // /blob/main/assets/audio/jogo.mp3 no GIT //
 musica.volume = 0.2;
 
