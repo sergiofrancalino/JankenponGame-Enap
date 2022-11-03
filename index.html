@@ -11,57 +11,54 @@
   </head>
 
   <body>
+
     <!-- Title Screen -->
     <article id="titleScreen" class="titleScreen">
-      <h1>First Ironhack/Enap Web Development Project</h1>
-      <h1>Jankenpon Game (Rock/Paper/Scissors)
-        <h1> Bem-vindo ao jogo Pedra-Papel-Tesoura!</h1>   
-      </h1>
-    </h1>
+      <h1>Ironhack/Enap Web Develop Bootcamp</h1>
+      <h2>Game &rarr; &#9994;&#127997;Rock &#9995; Paper &#9996;&#127995; Scissors</h2>
     </article>
 
     <!-- Start Screen -->
     <article id ="startScreen" class="startScreen">
-      <h1>Welcome to Jokenpô Game!</h1>
+      <h1 id="titleWelcome">Welcome to Jokenpô Game!</h1>
+
       <div>
-        <label>What's your first name? </label>
+        <label>Your name? </label>
         <input type ="text"
-          placeholder="Pls, enter your name here!"
+          placeholder="Enter name here!"
           id="inputName"
         />
-         <button id="btnStart">Play</button>
+        <button id="btnStart">Play</button>
       </div>
+
    </article> 
 
-   <!-- Game Screen -->
-   <article id="GameScreen">
-    <section id="gameScore" class="hide">
-      <p>Hi, <span id="playerName"></span></p>
-      <p> Let's play 👍rock paper  scissors game!</p>     
+   <!-- Game Screen and Game Score -->
+   <article id="gameScreen"> 
+      <section id="gameScore" class="hide">
 
-      <div class="choices">
-        <div class="choice">
-          <img id="rock" name="./assets/rock.ico" src="assets/rock.ico" />
-        </div>
-  
-        <div class="choice">
-          <img id="paper" name="./assets/paper.ico" src="assets/paper.ico" />
-        </div>
-  
-        <div class="choice">
-          <img id="scissors" name="./assets/scissors.ico" src="assets/scissors.ico" />
-        </div>
+        <p>Hello!, <span id="playerName"></span></p>
+       
+        <div class="choices">
+          <div class="choice">
+            <img id="rock" name="./assets/rock.ico" src="assets/rock.ico" />
+            <img id="paper" name="./assets/paper.ico" src="assets/paper.ico" /> 
+            <img id="scissors" name="./assets/scissors.ico" src="assets/scissors.ico" />
+          </div>
+        </div>  
 
-        <p>Play's result:  <span id ="ranking"></span></p> 
-        <p>Your score:  <span id="points"></span> points!!!</p>  
-        <p>Other player score:  <span id="points2"></span> points!!!</p> 
-    </section>
+        <p1>Play's result:  <span id ="ranking"></span></p1> 
+        <p2>&#128113; Your scores &rarr; <span id="points"></span> points!!!</p2>  
+        <p3> &#128021; Meggy scores &rarr; <span id="points2"></span> points!!!</p3>
+      </section>  
 
-    <div id="board" class="board"></div>
-  </article>
+      <div id="board" class="board"></div>
 
-    <!-- linking my scripts -> js -->
-    <script src="./js/class/script.js"></script>
-    <script src="./js/dom/index.js"></script>
+   </article>
+
+   <!-- linking my scripts -> js -->
+   <script src="./js/class/script.js"></script>
+   <script src="./js/dom/index.js"></script>
+    
   </body>
 </html>

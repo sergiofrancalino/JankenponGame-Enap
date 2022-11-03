@@ -100,9 +100,4 @@ btnStart.addEventListener("click", () => {
  // // All events listners inside the click event of "btnStart" from "play" buttom on start screen.
 
 });
-
-
-
-
-
   

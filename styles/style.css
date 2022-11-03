@@ -3,6 +3,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
 
 * {
+  font-weight: 100; /* degree of blackness*/
   margin: 0;
   padding: 0;
   font-family: 'Roboto', sans-serif;
@@ -15,14 +16,27 @@
   gap: 15px;
 }
 
+/* 1. Titles styles on start screen*/
 .titleScreen {
-  display: flex;
-  font-size: 2rem;
-  padding: 30px;
- /* border-radius: 15%;*/
-  background-color: rgb(53, 53, 53);
-  color: white;
+  display: flex; 
+  flex-direction: column;
+  align-items: center;
 }
+.titleScreen > h1 {
+  font-size: 1.2rem;
+  color: rgb(43, 180, 157);
+  padding: 30px; 
+
+}
+.titleScreen > h2 {
+  font-size: 2.5rem;
+  padding: 10px;
+  font-synthesis: weight;
+  box-shadow: 1px 13px 7px #bebebe, -8px -8px 5px #ffffff;
+  border-radius: 13px;
+}
+
+/* 1.1 - Start's login screen style */
 .startScreen {
   display: flex;
   height: 100vh;
@@ -32,8 +46,11 @@
 }
 
 .startScreen > h1 {
-  font-size: 3rem;
-  padding-bottom: 60px;
+  font-size: 130%;
+  padding:5%;
+  align-items: center;
+  text-align: auto;
+ 
 }
 
 .startScreen > div {
@@ -44,22 +61,53 @@
   border-radius: 18px;
   background: #e0e0e0;
   box-shadow: 8px 8px 5px #bebebe, -8px -8px 5px #ffffff;
-  padding: 40px;
-}
-#inputName {
-  width: 50vw;
+  padding: 8%;
 }
 
-#btnStart {
-  padding: 10px;
-  border-radius: 5px;
-  border: 0;
-  background-color: rgb(53, 53, 53);
-  color: white;
+#inputName {
+  width: 30vw;
+}
+
+/* Style button to click to play "btnStart"*/
+#btnStart {  
+  border-color: grey;
+  border-radius: 20%;
+  padding:1.8%; 
+  box-shadow: 0px 8px 5px #836161;
+
 }
 
 #btnStart:hover {
   cursor: pointer;
+  transform: scale(1.2);
+  
+}
+
+/* STEP 2 - Game Screen choice style */ 
+.choice {
+  display: flex;
+}
+.choice > img {
+  background-color:rgb(164, 151, 167); 
+  padding: 2%; 
+  margin: 10%;
+  border-radius:27%;
+  box-shadow:0 43px 23px rgba(20, 14, 105, 0.4);
+}
+
+.choice > img:hover {
+  cursor: pointer;
+	transform: scale(1.4);
+  
+}
+
+#gameScore > p {
+  display: block;
+  box-shadow: 8px 8px 5px #bebebe, -8px -8px 5px #ffffff;
+}
+#gameScore > p1{
+  display: block;
+  box-shadow: 8px 8px 5px #bebebe, -8px -8px 5px #ffffff;
 }
 
 /* mostra o elemento html */
