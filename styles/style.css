@@ -46,7 +46,7 @@
   height: 40vh;
   font-weight: bold;
   align-items: center;
-  background-image: url(/assets/meggy.gif);
+  background-image: url(../assets/meggy.gif);
   background-size: 100%;
   padding: 20%;
 }
