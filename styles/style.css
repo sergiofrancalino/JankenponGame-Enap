@@ -23,15 +23,15 @@
   align-items: center;
 }
 .titleScreen > h1 {
-  font-size: 1.2rem;
+  font-size: 1rem;
   color: rgb(43, 180, 157);
   padding: 1%; 
 
 }
 .titleScreen > h2 {
   display: flex;
-  font-size: 1.3rem;
-  padding: 2%;
+  font-size: 2rem;
+  padding: 1%;
   background-color:rgba(211, 201, 201, 0.692);
   font-synthesis: weight;
   box-shadow: 0px 30px 23px grey;
@@ -42,56 +42,41 @@
 /* Whole class - Start Screen in HTML in second article tag */
 .startScreen {
   display: flex;
+  flex-direction: column;
   height: 40vh;
-  flex-direction: column;
-  align-items: center;
-}
-
-
-
-
-/* class (Inside tag article/div from HTML where ask player nick name) */
-/* 
-.startScreen > div {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background: #e9e3e3;
-  border-radius: 3%;
-  box-shadow: 0px 30px 23px grey;
-  
-}  */
-
-/* Class startScreen > tag h1 from HTML "Welcome to Jokenpô Game" */
-
-.startScreen { 
-  display: flex;
   font-weight: bold;
-  /* font-size: 10%; */
-  padding: 6%;
-  flex-direction: row;
-  color: rgb(231, 222, 231);
-  box-shadow: rgb(141 138 138) 8px 12px 12px, rgb(255 255 255) 1px -8px 5px;
   align-items: center;
   background-image: url(/assets/meggy.gif);
   background-size: 100%;
-
-  border-radius: 2%;
- 
+  padding: 20%;
 }
 
+/* class (Inside tag article/div from HTML where ask player nick name) */
+
+.startScreen > div {
+  display: flex;
+  flex-direction: row;
+  color:blue;
+  font-size: 10%;
+   gap: 48%;
+  
+}  
+
+
+
 /* Id (Inside tag article/div from HTML */
-#inputName {
+
+/* #inputName {
   display: flex;
   border-radius: 10%;
   color:#c5c4c4;
-  border-color: rgba(52, 164, 184, 0.425);
+  border-color: rgba(207, 199, 211, 0.425);
   font-size: 1.2rem;
   margin-top: 25%;
   margin-left: 10%;
   padding: 1%;
-  box-shadow: 1px 23px 12px #8d8a8a, 1px -8px 5px #ffffff;
-}
+  box-shadow: 1px 23px 12px #b48bb6, 1px -8px 5px #ffffff;
+} */
 
 /* Style button to click to play "btnStart"*/
 /* 
@@ -156,10 +141,11 @@
   flex-direction: column;
   /* flex-wrap: wrap; */
   align-content: center;
+  margin-left: 1%;
 }
 
 #gameScore > p {
-  font-size: 1.2rem;
+  font-size: 1rem;
   padding: 1%;
   margin-left: 1%;
   box-shadow: 8px 8px 5px #bebebe, -8px -8px 5px #ffffff;
@@ -168,10 +154,10 @@
 /* Game results in Game Screen */
 
 #gameScore > p1 {
-  font-size: 1.2rem;
+  font-size: 1rem;
   padding: 1%;
   margin-left: 1%;
-  box-shadow: 8px 8px 5px #bebebe, -8px -8px 5px #ffffff;
+  
 }
 
 

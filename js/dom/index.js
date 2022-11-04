@@ -21,7 +21,7 @@ const btnStart = document.getElementById("btnStart");
 const ranking = document.getElementById("ranking"); //To show "status of play" on screen
 
 const musica = new Audio ("./assets/audio/jogo.mp4");
-musica.volume = 0.2;
+musica.volume = 0.03;
 
 // /blob/main/assets/audio/jogo.mp3 no GIT //
 
