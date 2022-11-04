@@ -20,7 +20,7 @@ const board = document.getElementById("board");
 const btnStart = document.getElementById("btnStart");
 const ranking = document.getElementById("ranking"); //To show "status of play" on screen
 
-const musica = new Audio ("./assets/audio/jogo.mp3");
+const musica = new Audio ("./assets/audio/jogo.mp4");
 musica.volume = 0.2;
 
 // /blob/main/assets/audio/jogo.mp3 no GIT //
@@ -42,36 +42,63 @@ btnStart.addEventListener("click", () => {
     const rock = document.getElementById("rock"); // To capture ROCK element
     const paper = document.getElementById("paper"); // To capture paper element
     const scissors = document.getElementById("scissors");
-    let result = "Game starting! 0 <--> 0"; // Variable to save the play result
+    let result = "Game is starting!"; // Variable to save the play result
     ranking.innerText = result; // To show the initial result 
+    const totalPlay = document.getElementById("totalPlay");
+    let partida = 0;
+
+    const meggyChoice = document.getElementById ("meggyChoice");
 
  // Step 3.2 - THE EVENT LISTNER to ROCK (clicked)
     rock.addEventListener("click", (e) => {
         rock.classList.add("escolha");
+        partida++
         let sorteado = game.deck [Math.floor(Math.random() * game.deck.length)]; //To save raffle from "game" array.
         let target = e.target.name; // To save human player choice.
-
+    
      // game.compareDeck(sorteado,target);
         result = game.compareDeck(sorteado,target);
-
+        if (result === "Everybody won!") {
+            game.points++;
+            points.innerText = game.points; 
+            game.points2++;
+            points2.innerText = game.points2; 
+        }
         if (result === "You won!") {
             game.points++;
             points.innerText = game.points; 
         }
         if (result === "Meggy won!"){
             game.points2++;
-            points2.innerText = game.points2; 
+            points2.innerText = game.points2;            
         }
+
+        // Verify what's sorteado//
+
+        if (sorteado === "./assets/rock.ico") {
+            sorteado = "ROCK";
+        }
+        if (sorteado === "./assets/paper.ico") {
+            sorteado = "PAPER";
+        }
+        if (sorteado === "./assets/scissors.ico") {
+            sorteado = "SCISSORS";
+        }
+
         ranking.innerText = result; // Result of this play! 
         console.log(game.points);
         rock.classList.remove("escolha");
+        totalPlay.innerText = partida;
+       
+        meggyChoice.innerText = sorteado;
     });
-
+  
  // Step 3.3 - THE EVENT LISTNER to PAPER (clicked)
     paper.addEventListener("click", (e) => {
+        partida++
         let sorteado = game.deck [Math.floor(Math.random() * game.deck.length)];
         let target = e.target.name;
-       
+
      // game.compareDeck(sorteado,target);
         result = game.compareDeck(sorteado,target);
 
@@ -85,10 +112,25 @@ btnStart.addEventListener("click", () => {
         }
         ranking.innerText = result; // Result of this play! 
         console.log(game.points);
+        totalPlay.innerText = partida;
+
+      // Verify what's sorteado//
+
+        if (sorteado === "./assets/rock.ico") {
+            sorteado = "ROCK";
+        }
+        if (sorteado === "./assets/paper.ico") {
+            sorteado = "PAPER";
+        }
+        if (sorteado === "./assets/scissors.ico") {
+            sorteado = "SCISSORS";
+        }
+        meggyChoice.innerText = sorteado;
     });
 
  //Step 3.4 - THE EVENT LISTNER to SCISSORS (clicked)
     scissors.addEventListener("click", (e) => {
+        partida++
         let sorteado = game.deck [Math.floor(Math.random() * game.deck.length)];
         let target = e.target.name;
    
@@ -105,6 +147,20 @@ btnStart.addEventListener("click", () => {
         }
         ranking.innerText = result; // Result of this play! 
         console.log(game.points);
+        totalPlay.innerText = partida;
+
+       // Verify what's sorteado//
+
+        if (sorteado === "./assets/rock.ico") {
+            sorteado = "ROCK";
+        }
+        if (sorteado === "./assets/paper.ico") {
+            sorteado = "PAPER";
+        }
+        if (sorteado === "./assets/scissors.ico") {
+            sorteado = "SCISSORS";
+        }
+        meggyChoice.innerText = sorteado;
     });
 
  // All events listners inside the click event of "btnStart" from "play" buttom on start screen.

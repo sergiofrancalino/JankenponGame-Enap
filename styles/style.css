@@ -25,78 +25,113 @@
 .titleScreen > h1 {
   font-size: 1.2rem;
   color: rgb(43, 180, 157);
-  padding: 30px; 
+  padding: 1%; 
 
 }
 .titleScreen > h2 {
-  font-size: 2.5rem;
-  padding: 10px;
+  display: flex;
+  font-size: 1.3rem;
+  padding: 2%;
+  background-color:rgba(211, 201, 201, 0.692);
   font-synthesis: weight;
-  box-shadow: 1px 13px 7px #bebebe, -8px -8px 5px #ffffff;
-  border-radius: 13px;
+  box-shadow: 0px 30px 23px grey;
+  border-radius: 10%;
+  border-color: rgba(52, 164, 184, 0.425);
 }
 
 /* Whole class - Start Screen in HTML in second article tag */
 .startScreen {
   display: flex;
-  /* height: 50vh; */
-  gap: 10%;
+  height: 40vh;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
 }
 
-/* Class startScreen > tag h1 from HTML "Welcome to Jokenpô Game" */
-.startScreen > h1 { 
-  font-size: 140%;
-  padding:5%;
-  align-items: center;
-  text-align: auto;
- 
-}
+
+
 
 /* class (Inside tag article/div from HTML where ask player nick name) */
+/* 
 .startScreen > div {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap:10px;
-  border-radius: 18px;
-  background: #e0e0e0;
-  box-shadow: 8px 8px 5px #bebebe, -8px -8px 5px #ffffff;
-  padding: 8%;
+  background: #e9e3e3;
+  border-radius: 3%;
+  box-shadow: 0px 30px 23px grey;
+  
+}  */
+
+/* Class startScreen > tag h1 from HTML "Welcome to Jokenpô Game" */
+
+.startScreen { 
+  display: flex;
+  font-weight: bold;
+  /* font-size: 10%; */
+  padding: 6%;
+  flex-direction: row;
+  color: rgb(231, 222, 231);
+  box-shadow: rgb(141 138 138) 8px 12px 12px, rgb(255 255 255) 1px -8px 5px;
+  align-items: center;
+  background-image: url(/assets/meggy.gif);
+  background-size: 100%;
+
+  border-radius: 2%;
+ 
 }
 
 /* Id (Inside tag article/div from HTML */
 #inputName {
-  width: 50vw;
+  display: flex;
   border-radius: 10%;
-  border-color:whitesmoke;
+  color:#c5c4c4;
+  border-color: rgba(52, 164, 184, 0.425);
+  font-size: 1.2rem;
+  margin-top: 25%;
+  margin-left: 10%;
+  padding: 1%;
+  box-shadow: 1px 23px 12px #8d8a8a, 1px -8px 5px #ffffff;
 }
 
 /* Style button to click to play "btnStart"*/
+/* 
+#label {
+  color: black;
+  padding: 5%;
+  font-size: 2rem;
+  margin-top: 30%;
+  margin-left: 45%;
+} */
+
 #btnStart {  
-  border-color: grey;
-  border-radius: 20%;
-  padding:1.8%; 
-  box-shadow: 0px 8px 5px #836161;
+  display: flex;
+  border-color: rgba(52, 164, 184, 0.425);
+  border-radius: 30%;
+  padding: 12%;
+  font-weight: bold;
+  font-size: 100%;
+  margin-top: 30%;
+  margin-left: 45%;
+  background-color:rgba(190, 166, 166, 0.692);
+  box-shadow: 0px 30px 23px grey;
 
 }
 
 #btnStart:hover {
   cursor: pointer;
-  transform: scale(1.2);
+  transform: scale(1.3);
   
 }
 
 /* STEP 2 - Game Screen choice style */ 
 .choice {
   display: flex;
+
 }
 .choice > img {
   background-color:rgb(164, 151, 167); 
-  padding: 1%; 
-  margin: 10%;
+  padding: 1.6%; 
+  margin: 8%;
   border-radius:27%;
   box-shadow:0 43px 23px rgba(20, 14, 105, 0.4);
 }
@@ -113,15 +148,65 @@
 	transform: scale(0.6);
 }
 
-#gameScore > p {
-  display: block;
-  box-shadow: 8px 8px 5px #bebebe, -8px -8px 5px #ffffff;
+/* Player name show in Game Screen*/
+
+#gameScore {
+  display: flex;
+  font-size: 1rem;
+  flex-direction: column;
+  /* flex-wrap: wrap; */
+  align-content: center;
 }
-#gameScore > p1{
-  display: block;
+
+#gameScore > p {
+  font-size: 1.2rem;
+  padding: 1%;
+  margin-left: 1%;
   box-shadow: 8px 8px 5px #bebebe, -8px -8px 5px #ffffff;
 }
 
+/* Game results in Game Screen */
+
+#gameScore > p1 {
+  font-size: 1.2rem;
+  padding: 1%;
+  margin-left: 1%;
+  box-shadow: 8px 8px 5px #bebebe, -8px -8px 5px #ffffff;
+}
+
+
+#gameScore > p2 {
+  font-size: 1.2rem;
+  padding: 1%;
+  margin-left: 1%;
+  box-shadow: 8px 8px 5px #bebebe, -8px -8px 5px #ffffff;
+}
+#gameScore > p3 {
+  font-size: 1.2rem;
+  padding: 1%;
+  margin-left: 1%;
+  box-shadow: 8px 8px 5px #bebebe, -8px -8px 5px #ffffff;
+}
+
+#gameScore > p4 {
+  font-size: 1.2rem;
+  padding: 1%;
+  margin-left: 1%;
+  box-shadow: 8px 8px 5px #bebebe, -8px -8px 5px #ffffff;
+}
+
+#gameScore > p5 {
+  font-size: 1.2rem;
+  padding: 1%;
+  margin-left: 1%;
+  box-shadow: 8px 8px 5px #bebebe, -8px -8px 5px #ffffff;
+}
+#gameScore > p6 {
+  font-size: 1.2rem;
+  padding: 1%;
+  margin-left: 1%;
+  box-shadow: 8px 8px 5px #bebebe, -8px -8px 5px #ffffff;
+}
 /* mostra o elemento html */
 .show {
   display: block;

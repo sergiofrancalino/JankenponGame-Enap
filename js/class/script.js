@@ -19,8 +19,8 @@ class Jankenpon {
     
     if (sorteado == target) {
       console.log("Empate: Humano e Maquina!");
-      return `Everybody won!`;
-
+      return `Everybody won! Tied...`;
+      
      }
   
     if (sorteado === "./assets/rock.ico" && target === "./assets/paper.ico") {
