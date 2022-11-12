@@ -21,22 +21,24 @@ const btnStart = document.getElementById("btnStart");
 const ranking = document.getElementById("ranking"); //To show "status of play" on screen
 
 const musica = new Audio ("./assets/audio/jogo.mp4");
-musica.volume = 0.03;
+      musica.volume = 0.09;
 
 // /blob/main/assets/audio/jogo.mp3 no GIT //
 
 //Step 3 - THE EVENT LISTNER to "btnStart" to show the start game screen
 
 btnStart.addEventListener("click", () => {
-
-    startScreen.classList.add("hide"); // To hide the start screen 
-    gameScore.className = "show"; // To show the start game screen 
-    game.player = inputName.value; 
-    points.innerText = game.points; // Player 1 score/points!
-    points2.innerText = game.points2; // Player 2 score/points! 
-    playerName.innerText = game.player;  
-    
-    musica.play();
+    if (playerName !== 0){
+        startScreen.classList.add("hide"); // To hide the start screen 
+        gameScore.className = "show"; // To show the start game screen 
+        game.player = inputName.value; 
+        points.innerText = game.points; // Player 1 score/points!
+        points2.innerText = game.points2; // Player 2 score/points! 
+        playerName.innerText = game.player;  
+        
+        musica.play();
+    }
+  
     
  // Step 3.1 - CAPTURING the user's choices by ID from HTML to game screen
     const rock = document.getElementById("rock"); // To capture ROCK element
@@ -48,9 +50,18 @@ btnStart.addEventListener("click", () => {
     let partida = 0;
 
     const meggyChoice = document.getElementById ("meggyChoice");
+    const soundRock = new Audio ("./assets/audio/rockwater.mp3");
+    const soundPaper = new Audio ("./assets/audio/paper.mp3");
+    const soundScissors = new Audio ("./assets/audio/scissors.mp3");
+    const everybodyWon = new Audio ("./assets/audio/everybodywon.wav");
+    const youLost = new Audio ("./assets/audio/youlost.wav");
+    const youWon = new Audio ("./assets/audio/youwon.wav");
 
  // Step 3.2 - THE EVENT LISTNER to ROCK (clicked)
     rock.addEventListener("click", (e) => {
+
+        soundRock.play();
+
         rock.classList.add("escolha");
         partida++
         let sorteado = game.deck [Math.floor(Math.random() * game.deck.length)]; //To save raffle from "game" array.
@@ -59,30 +70,33 @@ btnStart.addEventListener("click", () => {
      // game.compareDeck(sorteado,target);
         result = game.compareDeck(sorteado,target);
         if (result === "Everybody won!") {
+            everybodyWon.play()
             game.points++;
             points.innerText = game.points; 
             game.points2++;
             points2.innerText = game.points2; 
         }
         if (result === "You won!") {
+            youWon.play()   
             game.points++;
             points.innerText = game.points; 
         }
-        if (result === "Meggy won!"){
+        if (result === "You lost!"){
             game.points2++;
-            points2.innerText = game.points2;            
+            points2.innerText = game.points2;   
+            youLost.play()         
         }
 
         // Verify what's sorteado//
 
         if (sorteado === "./assets/rock.ico") {
-            sorteado = "ROCK";
+            sorteado = "✊ ROCK ";
         }
         if (sorteado === "./assets/paper.ico") {
-            sorteado = "PAPER";
+            sorteado = "✋ PAPER";
         }
         if (sorteado === "./assets/scissors.ico") {
-            sorteado = "SCISSORS";
+            sorteado = "✌ SCISSORS";
         }
 
         ranking.innerText = result; // Result of this play! 
@@ -95,6 +109,9 @@ btnStart.addEventListener("click", () => {
   
  // Step 3.3 - THE EVENT LISTNER to PAPER (clicked)
     paper.addEventListener("click", (e) => {
+
+        soundPaper.play();
+
         partida++
         let sorteado = game.deck [Math.floor(Math.random() * game.deck.length)];
         let target = e.target.name;
@@ -103,10 +120,12 @@ btnStart.addEventListener("click", () => {
         result = game.compareDeck(sorteado,target);
 
         if (result === "You won!") {
+        youWon.play() 
         game.points++;
         points.innerText = game.points; 
         };
-        if (result === "Meggy won!"){
+        if (result === "You lost!"){
+            youLost.play()   
             game.points2++;
             points2.innerText = game.points2; 
         }
@@ -116,20 +135,23 @@ btnStart.addEventListener("click", () => {
 
       // Verify what's sorteado//
 
-        if (sorteado === "./assets/rock.ico") {
-            sorteado = "ROCK";
-        }
-        if (sorteado === "./assets/paper.ico") {
-            sorteado = "PAPER";
-        }
-        if (sorteado === "./assets/scissors.ico") {
-            sorteado = "SCISSORS";
-        }
+      if (sorteado === "./assets/rock.ico") {
+        sorteado = "✊ ROCK ";
+    }
+    if (sorteado === "./assets/paper.ico") {
+        sorteado = "✋ PAPER";
+    }
+    if (sorteado === "./assets/scissors.ico") {
+        sorteado = "✌ SCISSORS";
+    }
         meggyChoice.innerText = sorteado;
     });
 
  //Step 3.4 - THE EVENT LISTNER to SCISSORS (clicked)
     scissors.addEventListener("click", (e) => {
+
+        soundScissors.play();
+
         partida++
         let sorteado = game.deck [Math.floor(Math.random() * game.deck.length)];
         let target = e.target.name;
@@ -138,10 +160,12 @@ btnStart.addEventListener("click", () => {
         result = game.compareDeck(sorteado,target);
 
        if (result === "You won!") {
+        youWon.play() 
         game.points++;
         points.innerText = game.points;
         }
-        if (result === "Meggy won!"){
+        if (result === "You lost!"){
+            youLost.play()   
             game.points2++;
             points2.innerText = game.points2; 
         }
@@ -151,15 +175,16 @@ btnStart.addEventListener("click", () => {
 
        // Verify what's sorteado//
 
-        if (sorteado === "./assets/rock.ico") {
-            sorteado = "ROCK";
-        }
-        if (sorteado === "./assets/paper.ico") {
-            sorteado = "PAPER";
-        }
-        if (sorteado === "./assets/scissors.ico") {
-            sorteado = "SCISSORS";
-        }
+        
+       if (sorteado === "./assets/rock.ico") {
+        sorteado = "✊ ROCK ";
+    }
+    if (sorteado === "./assets/paper.ico") {
+        sorteado = "✋ PAPER";
+    }
+    if (sorteado === "./assets/scissors.ico") {
+        sorteado = "✌ SCISSORS";
+    }
         meggyChoice.innerText = sorteado;
     });
 

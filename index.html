@@ -1,6 +1,6 @@
 <!-- index.html -->
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-US">
   <head>
     <meta charset="utf-8"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -15,42 +15,51 @@
 
     <!-- Title Screen -->
     <article id="titleScreen" class="titleScreen">
-      <h1>IronhacK || Enap &harr; My First Bootcamp Project || WDFT92</h1>
+      <h1>Ironhack || Enap &harr; My First Bootcamp Project || WDFT92</h1>
       <h2> Game &rarr; &#9994;&#127997;Rock &#9995; Paper &#9996;&#127995; Scissors</h2>
     </article>
 
     <!-- Start Screen -->
     <article id ="startScreen" class="startScreen">
-      <b id="titleWelcome"></b>
 
-      <div>
+      <div class="letsPlay">
         <label id="label"></label>
-        <h1> Hi, I'm Meggy! And you!?</h>
-        <input type ="text" placeholder="Enter name ou nick here..." id="inputName"/>
-        <button id="btnStart">START &#x261B</button>
-      </div>
+        <h1>Let's Play!? </h>
+      </div>  
 
+      <div class="input">
+            <input type ="text" placeholder="Enter name/nick here..." id="inputName" 
+            />
+      </div>
+      <button id="btnStart">START &#x261B</button>
    </article> 
 
    <!-- Game Screen and Game Score -->
    <article id="gameScreen"> 
       <section id="gameScore" class="hide">
         
-        <p> Welcome! Hi, <span id="playerName"></span></p>
-        <p1>🐩 I'm Meggy!        😘  We can play until music stops! LOL ;)))</p1> 
+        <p> Hi! Welcome, <span id="playerName"></span></p>
+        <h1> We can play until music stops!... </h1> 
         <div class="choices">
           <div class="choice">
             <img id="rock" name="./assets/rock.ico" src="assets/rock.ico" />
             <img id="paper" name="./assets/paper.ico" src="assets/paper.ico" /> 
             <img id="scissors" name="./assets/scissors.ico" src="assets/scissors.ico" />
+           
           </div>
         </div>  
 
-        <p6>🐩 Meggy chose &rarr; <span id ="meggyChoice"></span></p6>
-        <p2>🏆 Result &rarr; <span id ="ranking"></span></p2> 
-        <p3>&#128113; YOUR  scores   &rarr; <span id="points"></span> points!</p3>  
-        <p4> 🐩 MEGGY scores &rarr; <span id="points2"></span> points!</p4>
-        <p5> Total of plays &rarr; <span id ="totalPlay"></span></p5>
+        <div class="result">
+          <p>  &rarr; &#x1F472; Another chose: <span id ="meggyChoice"></span></p>
+          <h>  &rarr;  🏆 Result &rarr; <span id ="ranking"></span></h> 
+        </div>
+
+        <div class="scores">
+          <p>&#128113; YOUR  score  &rarr; <span id="points"></span> points!</p>  
+          <p> &#x1F472; OPPONENT's score &rarr; <span id="points2"></span> points!</p>
+          <p> &#x26F3; Total plays &rarr; <span id ="totalPlay"></span></p>
+        </div>
+       
       </section>  
 
       <div id="board" class="board"></div>

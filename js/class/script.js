@@ -19,7 +19,7 @@ class Jankenpon {
     
     if (sorteado == target) {
       console.log("Empate: Humano e Maquina!");
-      return `Everybody won! Tied...`;
+      return `Everybody won!`;
       
      }
   
@@ -34,13 +34,13 @@ class Jankenpon {
       console.log("Maquina Ganhou!");
       console.log(rock, "Escolha do Usuário - Clicado");
       console.log (sorteado, "Resultado do sorteador");
-      return "Meggy won!"
+      return "You lost!"
     }
     if (sorteado === "./assets/paper.ico" && target  === "./assets/rock.ico"){
       console.log("Maquina Ganhou!");
       console.log(rock, "Escolha do Usuário - Clicado");
       console.log (sorteado, "Resultado do sorteador");
-      return "Meggy won!"
+      return "You lost!"
 
     }
     if (sorteado === "./assets/paper.ico" && target  === "./assets/scissors.ico"){
@@ -61,7 +61,7 @@ class Jankenpon {
       console.log("Máquina Ganhou!");
       console.log(rock, "Escolha do Usuário - Clicado");
       console.log (sorteado, "Resultado do sorteador");
-      return "Meggy won!"
+      return "You lost!"
     }
   }
 }
