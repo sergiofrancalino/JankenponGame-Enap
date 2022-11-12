@@ -59,7 +59,6 @@ btnStart.addEventListener("click", () => {
 
  // Step 3.2 - THE EVENT LISTNER to ROCK (clicked)
     rock.addEventListener("click", (e) => {
-
         soundRock.play();
 
         rock.classList.add("escolha");
@@ -71,20 +70,19 @@ btnStart.addEventListener("click", () => {
         result = game.compareDeck(sorteado,target);
         if (result === "Everybody won!") {
             everybodyWon.play()
-            game.points++;
-            points.innerText = game.points; 
-            game.points2++;
-            points2.innerText = game.points2; 
         }
         if (result === "You won!") {
             youWon.play()   
+
             game.points++;
             points.innerText = game.points; 
         }
         if (result === "You lost!"){
+            youLost.play()  
+
             game.points2++;
             points2.innerText = game.points2;   
-            youLost.play()         
+                  
         }
 
         // Verify what's sorteado//
@@ -109,7 +107,6 @@ btnStart.addEventListener("click", () => {
   
  // Step 3.3 - THE EVENT LISTNER to PAPER (clicked)
     paper.addEventListener("click", (e) => {
-
         soundPaper.play();
 
         partida++
@@ -118,11 +115,15 @@ btnStart.addEventListener("click", () => {
 
      // game.compareDeck(sorteado,target);
         result = game.compareDeck(sorteado,target);
+        if (result === "Everybody won!") {
+            everybodyWon.play()
 
+        }
         if (result === "You won!") {
-        youWon.play() 
-        game.points++;
-        points.innerText = game.points; 
+            youWon.play() 
+
+            game.points++;
+            points.innerText = game.points; 
         };
         if (result === "You lost!"){
             youLost.play()   
@@ -137,19 +138,18 @@ btnStart.addEventListener("click", () => {
 
       if (sorteado === "./assets/rock.ico") {
         sorteado = "✊ ROCK ";
-    }
-    if (sorteado === "./assets/paper.ico") {
+      }
+      if (sorteado === "./assets/paper.ico") {
         sorteado = "✋ PAPER";
-    }
-    if (sorteado === "./assets/scissors.ico") {
+      }
+      if (sorteado === "./assets/scissors.ico") {
         sorteado = "✌ SCISSORS";
-    }
+      }
         meggyChoice.innerText = sorteado;
-    });
+      });
 
- //Step 3.4 - THE EVENT LISTNER to SCISSORS (clicked)
-    scissors.addEventListener("click", (e) => {
-
+     //Step 3.4 - THE EVENT LISTNER to SCISSORS (clicked)
+     scissors.addEventListener("click", (e) => {
         soundScissors.play();
 
         partida++
@@ -159,13 +159,19 @@ btnStart.addEventListener("click", () => {
      // game.compareDeck(sorteado,target);
         result = game.compareDeck(sorteado,target);
 
-       if (result === "You won!") {
-        youWon.play() 
-        game.points++;
-        points.innerText = game.points;
+        if (result === "Everybody won!") {
+            everybodyWon.play()
+        }
+
+        if (result === "You won!") {
+           youWon.play() 
+
+           game.points++;
+           points.innerText = game.points;
         }
         if (result === "You lost!"){
-            youLost.play()   
+            youLost.play()  
+
             game.points2++;
             points2.innerText = game.points2; 
         }
@@ -174,17 +180,16 @@ btnStart.addEventListener("click", () => {
         totalPlay.innerText = partida;
 
        // Verify what's sorteado//
-
         
        if (sorteado === "./assets/rock.ico") {
         sorteado = "✊ ROCK ";
-    }
-    if (sorteado === "./assets/paper.ico") {
+       }
+       if (sorteado === "./assets/paper.ico") {
         sorteado = "✋ PAPER";
-    }
-    if (sorteado === "./assets/scissors.ico") {
+       }
+       if (sorteado === "./assets/scissors.ico") {
         sorteado = "✌ SCISSORS";
-    }
+       }
         meggyChoice.innerText = sorteado;
     });
 
